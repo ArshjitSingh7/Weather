@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Weather App</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 bg-light mx-auto mt-5 p-5 text-center rounded shadow-lg">
+                <h1 class="location"></h1>
+                <h3 class="weather-report"></h3>
+                <h3 class="temp"></h3>
+                <ul class="list-group mt-3">
+                    <li class="list-group-item humidity"></li>
+                    <li class="list-group-item feels-like"></li>
+                    <li class="list-group-item wind"></li>
+                </ul>
+                <button class="btn btn-dark mt-4 change-location" data-toggle="modal" data-target="#change">Change Location</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="change">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-heading p-3 bg-dark text-white">
+                    <h5 class="modal-title">Choose Location</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">City</label>
+                        <input type="text" class="form-control cityName">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light Close" data-dismiss="modal">Close</button>
+                    <button class="btn btn-dark Close save-data" data-dismiss="modal">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="storage.js"></script>
+    <script src="ui.js"></script>
+    <script src="weather.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
